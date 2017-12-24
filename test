@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Fiborecurssive {
+
+	static int fun(int n){
+		int fn,fs,fp;
+		int i;
+		
+		fn=1;
+		fs=0;
+		if(n==0){
+			fn=fs;
+		}
+		for(i=2;i<=n;i++){
+			fp=fs;//f(n-2)
+			fs=fn;//f(n-1)
+			fn=fp+fs;//fn
+		}
+		return fn;	
+	}
+	public static void main(String[] args){
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Entrer une valeur:");
+		int n=sc.nextInt();
+	  
+		System.out.println("f("+n+")="+fun(n));
+	    }
+  }
+
